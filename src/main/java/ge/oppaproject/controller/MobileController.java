@@ -17,7 +17,7 @@ public class MobileController {
     public String mobile(Model model,
                          @RequestParam String phoneNumber,
                          @RequestParam String amount){
-        System.out.println(phoneNumber + "\n" + amount);
+        System.out.println("Phone number : " + phoneNumber + "\nAmount : " + amount);
         return "redirect:/";
     }
 }
