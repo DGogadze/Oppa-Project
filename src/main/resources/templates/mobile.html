@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script rel="script" src="javascript/mobilejs.js"></script>
+    <script rel="script" src="../static/javascript/mobilejs.js"></script>
 </head>
 <body>
 <div class="container">
@@ -18,7 +20,8 @@
     </div>
     <div class="box">
         <p><b>შეიყვანეთ ჩასარიცხი თანხა</b></p>
-        <input max="100" min="1" style="text-align: right" class="inputs" id="amount" name="amount" type="text" autocomplete="off" required>
+        <input onchange="validate()" max="100" min="1" style="text-align: right;width: 491px" class="inputs" id="amount" name="amount" type="number" autocomplete="off" required>
+        <br><b><span style="font-size: 15px" id="result"></span></b>
         <p style="padding: 25px"><b>მინიმუმ 1 ლარი,მაქსიმუმ 100 ლარი.(საკომისიო შეადგენს 1%)</b></p>
     </div>
     <button class="btn btn-success" type="submit" style="width: 50%;height: 124px;color: black;font-size: 35px">გადახდა</button>
