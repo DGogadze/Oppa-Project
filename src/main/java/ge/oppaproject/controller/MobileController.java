@@ -1,5 +1,6 @@
 package ge.oppaproject.controller;
 
+import ge.oppaproject.model.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,8 @@ public class MobileController {
     public String mobile(Model model,
                          @RequestParam String phoneNumber,
                          @RequestParam String amount){
-        System.out.println("Phone number : " + phoneNumber + "\nAmount : " + amount);
+        Transaction transaction = new Transaction();
+        transaction.mobileTransaction(phoneNumber, amount);
         return "redirect:/";
     }
 }
