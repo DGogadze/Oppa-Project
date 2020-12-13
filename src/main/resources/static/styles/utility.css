@@ -18,7 +18,8 @@ html{
 .container {
     width: 1024px;
     height: 1024px;
-    display: inline-block;
+    size: 1024px 1024px;
+    display: grid;
     grid-row: auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
