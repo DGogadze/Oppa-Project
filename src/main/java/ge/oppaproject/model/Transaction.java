@@ -1,6 +1,7 @@
 package ge.oppaproject.model;
 
 public class Transaction {
+    private long id;
     private TransactionType transactionType;
     private String privateId;
     private String phoneNumber;
@@ -9,6 +10,7 @@ public class Transaction {
 
     public void mobileTransaction(String phoneNumber,
                                   String amount){
+        this.id = (long) (Math.random()*1000);
         this.transactionType = TransactionType.mobile;
         this.phoneNumber = phoneNumber;
         this.amount = amount;
@@ -17,6 +19,7 @@ public class Transaction {
     public void charityTransaction(String privateId,
                                    String phoneNumber,
                                    String amount){
+        this.id = (long) (Math.random()*1000);
         this.transactionType = TransactionType.charity;
         this.phoneNumber = phoneNumber;
         this.privateId = privateId;
@@ -27,6 +30,7 @@ public class Transaction {
                                             String bankAccount,
                                             String amount,
                                             String phoneNumber){
+        this.id = (long) (Math.random()*1000);
         this.transactionType = TransactionType.financialServices;
         this.privateId = privateId;
         this.bankAccount = bankAccount;
@@ -37,6 +41,7 @@ public class Transaction {
     public void utilityTransaction(String privateId,
                                    String phoneNumber,
                                    String amount){
+        this.id = (long) (Math.random()*1000);
         this.transactionType = TransactionType.utility;
         this.privateId = privateId;
         this.phoneNumber = phoneNumber;
@@ -81,5 +86,25 @@ public class Transaction {
 
     public void setBankAccount(String bankAccount) {
         this.bankAccount = bankAccount;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "id=" + id +
+                ", transactionType=" + transactionType +
+                ", privateId='" + privateId + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", amount='" + amount + '\'' +
+                ", bankAccount='" + bankAccount + '\'' +
+                '}';
     }
 }
