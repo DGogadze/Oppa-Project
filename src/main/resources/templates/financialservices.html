@@ -38,12 +38,14 @@
     </form>
 </div>
 <script>
+    $.mask.definitions['A'] = "[A-Z]";
+
     $(function () {
         $("#privateId").mask("99999999999");
     });
 
     $(function () {
-        $("#bankAccount").mask("GE99aa9999999999999999");
+        $("#bankAccount").mask("GE99AA9999999999999999");
     });
 
     $(function(){
