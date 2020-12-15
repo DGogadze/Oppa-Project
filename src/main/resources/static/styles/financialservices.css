@@ -16,7 +16,7 @@ html{
     background-color:#eee;
 }
 .container {
-    width: 1024px;
+    max-width: 1024px;
     height: 1024px;
     size: 1024px 1024px;
     display: grid;
